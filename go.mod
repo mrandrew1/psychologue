@@ -10,7 +10,6 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/joho/godotenv v1.4.0
 	github.com/mashingan/smapping v0.1.13
-	github.com/putukrisna6/golang-api v0.0.0-20220327063513-3c1c7b0f3f61
 	golang.org/x/crypto v0.0.0-20220321153916-2c7772ba3064
 	gorm.io/driver/mysql v1.3.2
 	gorm.io/gorm v1.23.3
