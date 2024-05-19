@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/putukrisna6/golang-api/entity"
+	"github.com/mranrew1/golang-api/entity"
 )
 
 type ReceiptCache interface {
