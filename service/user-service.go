@@ -4,9 +4,9 @@ import (
 	"log"
 
 	"github.com/mashingan/smapping"
-	"github.com/putukrisna6/golang-api/dto"
-	"github.com/putukrisna6/golang-api/entity"
-	"github.com/putukrisna6/golang-api/repository"
+	"github.com/mrandrew1/psychologue/dto"
+	"github.com/mrandrew1/psychologue/entity"
+	"github.com/mrandrew1/psychologue/repository"
 )
 
 type UserService interface {

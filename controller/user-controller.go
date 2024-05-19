@@ -7,9 +7,9 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
-	"github.com/putukrisna6/golang-api/dto"
-	"github.com/putukrisna6/golang-api/helper"
-	"github.com/putukrisna6/golang-api/service"
+	"github.com/mrandrew1/psychologue/dto"
+	"github.com/mrandrew1/psychologue/helper"
+	"github.com/mrandrew1/psychologue/service"
 )
 
 type UserController interface {
