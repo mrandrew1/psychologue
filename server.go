@@ -1,12 +1,12 @@
 package main
 
 import (
-	"golang-api/cache"
-	"golang-api/config"
-	"golang-api/controller"
-	"golang-api/middleware"
-	"golang-api/repository"
-	"golang-api/service"
+	"github.com/mrandrew1/psychologue/cache"
+	"github.com/mrandrew1/psychologue/config"
+	"github.com/mrandrew1/psychologue/controller"
+	"github.com/mrandrew1/psychologue/middleware"
+	"github.com/mrandrew1/psychologue/repository"
+	"github.com/mrandrew1/psychologue/service"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
