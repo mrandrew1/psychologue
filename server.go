@@ -73,7 +73,7 @@ func main() {
 
 	psySessionRoutes := r.Group("/api/sessions", middleware.AuthorizeJWT(jwtService))
 	{
-		psySessionRoutes.GET("", psySessionController.All)
+		psySessionRoutes.GET("/:id", psySessionController.All)
 		psySessionRoutes.POST("", psySessionController.Insert)
 		psySessionRoutes.GET("/:id", psySessionController.Get)
 		psySessionRoutes.PUT("", psySessionController.Update)

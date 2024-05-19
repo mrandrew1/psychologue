@@ -1,6 +1,6 @@
 FROM golang:1.18-alpine as builder
 
-LABEL maintainer="Putu Krisna Andyartha"
+LABEL maintainer="Gusev Andrew"
 
 RUN apk update && apk add --no-cache git
 

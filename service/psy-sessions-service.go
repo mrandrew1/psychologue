@@ -16,7 +16,7 @@ type PsySessionService interface {
 	Update(b dto.PsySessionUpdateDTO) entity.PsySession
 	Get(bookID uint64) entity.PsySession
 	Delete(b entity.PsySession)
-	All() []entity.PsySession
+	All(id uint64) []entity.PsySession
 	IsAllowedToEdit(userID string, sessID uint64) bool
 }
 
@@ -56,8 +56,8 @@ func (service *psySessionService) Get(sessID uint64) entity.PsySession {
 	return service.psySessionRepository.GetSession(sessID)
 }
 
-func (service *psySessionService) All() []entity.PsySession {
-	return service.psySessionRepository.AllSessions()
+func (service *psySessionService) All(id uint64) []entity.PsySession {
+	return service.psySessionRepository.AllSessions(id)
 }
 
 func (service *psySessionService) Delete(session entity.PsySession) {

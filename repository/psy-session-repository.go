@@ -10,7 +10,7 @@ type PsySessionRepository interface {
 	UpdateSession(PsySession entity.PsySession) entity.PsySession
 	GetSession(SessionID uint64) entity.PsySession
 	DeleteSession(PsySession entity.PsySession)
-	AllSessions() []entity.PsySession
+	AllSessions(id uint64) []entity.PsySession
 }
 
 type PsySessionConnection struct {
@@ -45,8 +45,9 @@ func (db *PsySessionConnection) DeleteSession(psySession entity.PsySession) {
 	db.connection.Delete(&psySession)
 }
 
-func (db *PsySessionConnection) AllSessions() []entity.PsySession {
+func (db *PsySessionConnection) AllSessions(id uint64) []entity.PsySession {
 	var psySessions []entity.PsySession
-	db.connection.Preload("User").Find(&psySessions)
+	db.connection.Where(&psySessions, "client_id=?", id).Find(&psySessions)
+	//db.connection.Preload("User").Find(&psySessions)
 	return psySessions
 }

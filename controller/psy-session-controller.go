@@ -34,7 +34,14 @@ func NewPsySessionController(psySessionService service.PsySessionService, jwtSer
 }
 
 func (c *psySessionController) All(context *gin.Context) {
-	var psySessions []entity.PsySession = c.psySessionService.All()
+	id, err := strconv.ParseUint(context.Param("id"), 0, 0)
+	if err != nil {
+		res := helper.BuildErrorResponse("parameter ID must not be empty", err.Error(), helper.EmptyObj{})
+		context.AbortWithStatusJSON(http.StatusBadRequest, res)
+		return
+	}
+
+	var psySessions []entity.PsySession = c.psySessionService.All(id)
 	res := helper.BuildValidResponse("OK", psySessions)
 	context.JSON(http.StatusOK, res)
 }

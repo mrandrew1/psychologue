@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 networks:
   go-app:
@@ -6,7 +6,7 @@ networks:
 
 services:
   app:
-    container_name: golang-api
+    container_name: psychologue-api
     build: .
     ports:
       - "8080:8080"
@@ -22,7 +22,7 @@ services:
     image: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=test
-      - MYSQL_DATABASE=golang_api
+      - MYSQL_DATABASE=psychologue_api
     ports:
       - "3306:3306"
     volumes:
