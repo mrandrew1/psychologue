@@ -1,4 +1,4 @@
-module github.com/putukrisna6/golang-api
+module github.com/mrandrew1/psychologue
 
 // +heroku goVersion go1.18
 go 1.18
