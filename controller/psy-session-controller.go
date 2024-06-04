@@ -81,7 +81,7 @@ func (c *psySessionController) Insert(context *gin.Context) {
 		panic(err.Error())
 	}
 
-	PsySessionCreateDTO.ClientID = convertedUserID
+	PsySessionCreateDTO.SpecialistID = convertedUserID
 	result := c.psySessionService.Insert(PsySessionCreateDTO)
 	response := helper.BuildValidResponse("OK", result)
 	context.JSON(http.StatusCreated, response)

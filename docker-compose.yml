@@ -1,5 +1,3 @@
-version: '3.9'
-
 networks:
   go-app:
     driver: bridge
@@ -22,7 +20,7 @@ services:
     image: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=test
-      - MYSQL_DATABASE=psychologue_api
+      - MYSQL_DATABASE=golang_api
     ports:
       - "3306:3306"
     volumes:
